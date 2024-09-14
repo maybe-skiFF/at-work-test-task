@@ -1,5 +1,7 @@
+import { Header } from '../../components/Header/Header';
+
 const UserPage = () => {
-  return <h1>UserPage</h1>;
+  return <Header />;
 };
 
 export { UserPage };

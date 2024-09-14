@@ -1,5 +1,7 @@
+import { Header } from '../../components/Header/Header';
+
 const MainPage = () => {
-  return <h1>MainPage</h1>;
+  return <Header />;
 };
 
 export { MainPage };
