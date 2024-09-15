@@ -1,0 +1,89 @@
+.userItemContainer {
+  display: flex;
+  column-gap: 20px;
+  width: 360px;
+  /* height: 168px; */
+  padding: 24px;
+  background-color: var(--color-6);
+  border-radius: 16px;
+}
+
+.userItemImgWrapper {
+  display: flex;
+  border-radius: 8px;
+  width: 112px;
+  height: 120px;
+
+  background-image: url('../../../public/user-avatar.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.userItemContent {
+  display: flex;
+}
+
+.userItemDiscription {
+  display: flex;
+  flex-direction: column;
+}
+
+.userItemName {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-accent);
+
+  margin-bottom: 7px;
+}
+
+.userItemCompany {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-2);
+}
+
+.userItemCity {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-3);
+
+  margin-top: 55px;
+}
+
+.dropdownBtn {
+  border-radius: 5px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-1);
+
+  position: relative;
+  cursor: pointer;
+
+  margin-top: 5px;
+  margin-left: 90px;
+}
+
+.dropdownBtn::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+
+  border-radius: 5px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-1);
+}
+
+.dropdownBtn::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+
+  border-radius: 5px;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-1);
+}
