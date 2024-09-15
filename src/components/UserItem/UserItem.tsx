@@ -9,14 +9,14 @@ interface IProps {
 }
 
 const UserItem = ({ isActiveUsers, usersData }: IProps) => {
-  const { name, company, address } = usersData;
+  const { name, username, company, address } = usersData;
 
   return (
     <div className={styles.userItemContainer}>
       <div className={styles.userItemImgWrapper}></div>
       <div className={styles.userItemContent}>
         <div className={styles.userItemDiscription}>
-          <span className={styles.userItemName}>{name}</span>
+          <span className={styles.userItemName}>{username}</span>
           <span className={styles.userItemCompany}>{company.name}</span>
           <span className={styles.userItemCity}>{address.city}</span>
         </div>

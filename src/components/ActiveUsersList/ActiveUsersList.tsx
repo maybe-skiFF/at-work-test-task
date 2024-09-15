@@ -23,7 +23,7 @@ const ActiveUsersList = () => {
             />
           ))
         ) : (
-          <p>Active users not found</p>
+          <p>Список активных пользователей пуст</p>
         )}
       </div>
     </div>

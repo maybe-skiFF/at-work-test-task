@@ -1,7 +1,12 @@
+import styles from './UserPage.module.css';
 import { Header } from '../../components/Header/Header';
 
 const UserPage = () => {
-  return <Header />;
+  return (
+    <div className={styles.userPageWrapper}>
+      <Header />
+    </div>
+  );
 };
 
 export { UserPage };

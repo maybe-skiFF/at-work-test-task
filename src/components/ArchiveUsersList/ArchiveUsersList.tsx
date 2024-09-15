@@ -23,7 +23,7 @@ const ArchiveUsersList = () => {
             />
           ))
         ) : (
-          <p>Archive is empty</p>
+          <p>Архив пуст</p>
         )}
       </div>
     </div>
