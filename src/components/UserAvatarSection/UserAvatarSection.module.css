@@ -1,0 +1,30 @@
+.userAvatarSectionWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 280px;
+  padding: 40px;
+  border-radius: 16px;
+  background-color: var(--color-6);
+}
+
+.userAvatarImg {
+  display: flex;
+  width: 280px;
+  height: 485px;
+  margin-bottom: 25px;
+}
+
+.userDescription {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--color-3);
+  border-bottom: 1px solid var(--color-4);
+  padding: 10px 0 15px 0;
+}
+
+.userDescriptionActive {
+  font-weight: 600;
+  color: var(--color-1);
+}

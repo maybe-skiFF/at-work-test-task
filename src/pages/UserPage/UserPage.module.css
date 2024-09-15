@@ -1,0 +1,27 @@
+.userPageContent {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  padding: 0 150px;
+
+  background-color: var(--color-5);
+}
+
+.backBtn {
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--color-2);
+  cursor: pointer;
+
+  padding: 20px 0;
+}
+
+.arrowLeftImg {
+  margin-right: 10px;
+}
