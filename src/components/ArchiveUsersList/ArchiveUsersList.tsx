@@ -6,15 +6,15 @@ import { IUserData } from '../../interfaces';
 
 const ArchiveUsersList = () => {
   const isActiveUsers = false;
-  const activeUsersData = useSelector(
-    (state: RootState) => state.usersData.usersData,
+  const archivedUsersData = useSelector(
+    (state: RootState) => state.usersData.archivedUsers,
   );
 
   return (
     <div className={styles.archiveUsersListWrapper}>
       <p className={styles.title}>Архив</p>
       <div className={styles.usersWrapper}>
-        {activeUsersData?.map((user: IUserData) => (
+        {archivedUsersData?.map((user: IUserData) => (
           <UserItem
             key={user.id}
             isActiveUsers={isActiveUsers}

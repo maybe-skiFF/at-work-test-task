@@ -12,7 +12,6 @@ const MainPage = () => {
   const { data, isLoading } = useGetUsersQuery('users');
 
   useEffect(() => {
-    console.log(data);
     if (data) dispatch(setActiveUsers(data));
   }, [data, dispatch]);
 

@@ -20,7 +20,11 @@ const UserItem = ({ isActiveUsers, usersData }: IProps) => {
           <span className={styles.userItemCompany}>{company.name}</span>
           <span className={styles.userItemCity}>{address.city}</span>
         </div>
-        {isActiveUsers ? <DropdownMenuActive /> : <DropdownMenuArchive />}
+        {isActiveUsers ? (
+          <DropdownMenuActive userName={name} />
+        ) : (
+          <DropdownMenuArchive />
+        )}
       </div>
     </div>
   );
