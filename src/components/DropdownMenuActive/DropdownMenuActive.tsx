@@ -22,7 +22,9 @@ const DropdownMenuActive = ({ userName }: IProps) => {
 
   return (
     <div className={styles.dropdown}>
-      <div onClick={toggleMenu} className={styles.dropdownBtn}></div>
+      <div onClick={toggleMenu} className={styles.dropdownBtnWrapper}>
+        <div className={styles.dropdownBtn}></div>
+      </div>
       {isOpen && (
         <ul className={styles.dropdownMenu}>
           <li className={styles.dropdownItem}>Редактировать</li>
