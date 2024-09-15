@@ -7,6 +7,13 @@
   background-color: var(--color-5);
 }
 
+.usersWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
 .title {
   font-family: var(--font-family);
   font-weight: 600;
