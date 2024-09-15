@@ -1,8 +1,7 @@
 .userItemContainer {
   display: flex;
   column-gap: 20px;
-  width: 360px;
-  /* height: 168px; */
+  width: 312px;
   padding: 24px;
   background-color: var(--color-6);
   border-radius: 16px;
@@ -63,7 +62,7 @@
   cursor: pointer;
 
   margin-top: 5px;
-  margin-left: 90px;
+  margin-left: 50px;
 }
 
 .dropdownBtn::after {
