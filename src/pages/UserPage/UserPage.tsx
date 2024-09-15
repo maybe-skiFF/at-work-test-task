@@ -2,6 +2,7 @@ import styles from './UserPage.module.css';
 import { Header } from '../../components/Header/Header';
 import arrowLeft from '../../../public/arrow-left.png';
 import { UserAvatarSection } from '../../components/UserAvatarSection/UserAvatarSection';
+import { UserDataSection } from '../../components/UserDataSection/UserDataSection';
 const UserPage = () => {
   return (
     <div className={styles.userPageWrapper}>
@@ -15,7 +16,10 @@ const UserPage = () => {
           />
           Назад
         </button>
-        <UserAvatarSection />
+        <div className={styles.userSections}>
+          <UserAvatarSection />
+          <UserDataSection />
+        </div>
       </div>
     </div>
   );
