@@ -20,7 +20,7 @@
 .userDataForm {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 18px;
 }
 
 .formField {
@@ -67,4 +67,12 @@
 .formBtn:hover {
   background-color: var(--color-5);
   color: var(--color-2);
+}
+
+.formErrorText {
+  height: 14px;
+  color: red;
+  text-align: center;
+
+  margin: 5px 0;
 }
