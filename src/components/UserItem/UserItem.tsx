@@ -23,7 +23,7 @@ const UserItem = ({ isActiveUsers, usersData }: IProps) => {
         {isActiveUsers ? (
           <DropdownMenuActive userName={name} />
         ) : (
-          <DropdownMenuArchive />
+          <DropdownMenuArchive userName={name} />
         )}
       </div>
     </div>

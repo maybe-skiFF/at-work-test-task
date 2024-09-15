@@ -32,7 +32,12 @@ const DropdownMenuActive = ({ userName }: IProps) => {
           >
             Архивировать
           </li>
-          <li className={styles.dropdownItem}>Скрыть</li>
+          <li
+            onClick={() => dispatch(removeActiveUser(userName))}
+            className={styles.dropdownItem}
+          >
+            Скрыть
+          </li>
         </ul>
       )}
     </div>

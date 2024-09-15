@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import styles from './DropdownMenuArchive.module.css';
+import { useDispatch } from 'react-redux';
+import { userRecoveryFromArchive } from '../../redux/usersDataSlice';
 
-const DropdownMenuArchive = () => {
+interface IProps {
+  userName: string;
+}
+
+const DropdownMenuArchive = ({ userName }: IProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const dispatch = useDispatch();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -13,7 +20,12 @@ const DropdownMenuArchive = () => {
       <div onClick={toggleMenu} className={styles.dropdownBtn}></div>
       {isOpen && (
         <ul className={styles.dropdownMenu}>
-          <li className={styles.dropdownItem}>Активировать</li>
+          <li
+            onClick={() => dispatch(userRecoveryFromArchive(userName))}
+            className={styles.dropdownItem}
+          >
+            Активировать
+          </li>
         </ul>
       )}
     </div>

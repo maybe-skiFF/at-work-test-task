@@ -14,13 +14,17 @@ const ArchiveUsersList = () => {
     <div className={styles.archiveUsersListWrapper}>
       <p className={styles.title}>Архив</p>
       <div className={styles.usersWrapper}>
-        {archivedUsersData?.map((user: IUserData) => (
-          <UserItem
-            key={user.id}
-            isActiveUsers={isActiveUsers}
-            usersData={user}
-          />
-        )) ?? <p>No active users found</p>}
+        {archivedUsersData.length ? (
+          archivedUsersData?.map((user: IUserData) => (
+            <UserItem
+              key={user.id}
+              isActiveUsers={isActiveUsers}
+              usersData={user}
+            />
+          ))
+        ) : (
+          <p>Archive is empty</p>
+        )}
       </div>
     </div>
   );

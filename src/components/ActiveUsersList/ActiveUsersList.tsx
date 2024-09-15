@@ -7,20 +7,24 @@ import { RootState } from '../../redux/store';
 const ActiveUsersList = () => {
   const isActiveUsers = true;
   const activeUsersData = useSelector(
-    (state: RootState) => state.usersData.usersData,
+    (state: RootState) => state.usersData.activeUsers,
   );
 
   return (
     <div className={styles.activeUsersListWrapper}>
       <p className={styles.title}>Активные</p>
       <div className={styles.usersWrapper}>
-        {activeUsersData?.map((user: IUserData) => (
-          <UserItem
-            key={user.id}
-            isActiveUsers={isActiveUsers}
-            usersData={user}
-          />
-        )) ?? <p>No active users found</p>}
+        {activeUsersData.length ? (
+          activeUsersData?.map((user: IUserData) => (
+            <UserItem
+              key={user.id}
+              isActiveUsers={isActiveUsers}
+              usersData={user}
+            />
+          ))
+        ) : (
+          <p>Active users not found</p>
+        )}
       </div>
     </div>
   );
