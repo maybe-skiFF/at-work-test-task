@@ -3,12 +3,15 @@ import styles from './UserDataSection.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formValidateSchema } from '../../utils/formValidationSchema';
 import { IFormUserData } from '../../interfaces';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { updateUserData } from '../../redux/usersDataSlice';
 
 const UserDataSection = () => {
   const { key } = useParams();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const activeUsersData = useSelector(
     (state: RootState) => state.usersData.activeUsers,
   );
@@ -33,8 +36,33 @@ const UserDataSection = () => {
     },
   });
 
-  const onSubmit: SubmitHandler<IFormUserData> = async data => {
-    console.log(data);
+  const onSubmit: SubmitHandler<IFormUserData> = data => {
+    const payload = {
+      id: Number(key),
+      updatingUserData: {
+        name: data.name,
+        username: data.username,
+        email: data.email,
+        phone: data.phone,
+        address: {
+          city: data.city,
+          street: '',
+          suite: '',
+          zipcode: '',
+          geo: {
+            lat: '',
+            lng: '',
+          },
+        },
+        company: {
+          name: data.company,
+          catchPhrase: '',
+          bs: '',
+        },
+      },
+    };
+    dispatch(updateUserData(payload));
+    navigate('/');
   };
 
   return (

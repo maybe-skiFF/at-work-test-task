@@ -35,4 +35,5 @@ export interface IFormUserData {
   city: string;
   phone: string;
   company: string;
+  id?: number;
 }

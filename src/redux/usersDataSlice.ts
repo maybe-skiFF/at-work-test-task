@@ -44,6 +44,20 @@ export const usersDataSlice = createSlice({
         );
       }
     },
+    updateUserData: (
+      state,
+      action: PayloadAction<{
+        id: number;
+        updatingUserData: Partial<IUserData>;
+      }>,
+    ) => {
+      const { id, updatingUserData } = action.payload;
+      const searchedUser = state.activeUsers.find(user => user.id === id);
+
+      if (searchedUser) {
+        Object.assign(searchedUser, updatingUserData);
+      }
+    },
   },
 });
 
@@ -52,6 +66,7 @@ export const {
   removeActiveUser,
   archivedUser,
   userRecoveryFromArchive,
+  updateUserData,
 } = usersDataSlice.actions;
 
 export default usersDataSlice.reducer;
