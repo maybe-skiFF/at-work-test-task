@@ -12,6 +12,7 @@
   display: flex;
   width: 280px;
   height: 485px;
+  background-image: url('../../../public/user-avatar-big.png');
   margin-bottom: 25px;
 }
 
@@ -27,4 +28,17 @@
 .userDescriptionActive {
   font-weight: 600;
   color: var(--color-1);
+}
+
+@media (max-width: 830px) {
+  .userAvatarImg {
+    background-image: url('../../../public/user-avatar-small.png');
+    height: 187px;
+  }
+}
+
+@media (max-width: 400px) {
+  .userAvatarSectionWrapper {
+    padding: 20px;
+  }
 }

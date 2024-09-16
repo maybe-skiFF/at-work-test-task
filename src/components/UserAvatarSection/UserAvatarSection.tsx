@@ -1,10 +1,11 @@
 import styles from './UserAvatarSection.module.css';
-import userAvatar from '../../../public/user-avatar-big.png';
+// import userAvatar from '../../../public/user-avatar-big.png';
 
 const UserAvatarSection = () => {
   return (
     <div className={styles.userAvatarSectionWrapper}>
-      <img className={styles.userAvatarImg} src={userAvatar} alt="userAvatar" />
+      {/* <img className={styles.userAvatarImg} src={userAvatar} alt="userAvatar" /> */}
+      <div className={styles.userAvatarImg}></div>
       <div>
         <p
           className={`${styles.userDescription} ${styles.userDescriptionActive}`}

@@ -76,3 +76,25 @@
 
   margin: 5px 0;
 }
+
+@media (max-width: 1250px) {
+  .userDataSectionWrapper {
+    width: max-content;
+  }
+
+  .formInput {
+    width: 300px;
+  }
+}
+
+@media (max-width: 940px) {
+  .formInput {
+    width: 255px;
+  }
+}
+
+@media (max-width: 940px) {
+  .userDataSectionWrapper {
+    padding: 20px;
+  }
+}
