@@ -5,13 +5,16 @@ import { formValidateSchema } from '../../utils/formValidationSchema';
 import { IFormUserData } from '../../interfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../redux/store';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { updateUserData } from '../../redux/usersDataSlice';
 
-const UserDataSection = () => {
+interface IProps {
+  setIsVisible: (isVisible: boolean) => void;
+}
+
+const UserDataSection = ({ setIsVisible }: IProps) => {
   const { key } = useParams();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   const activeUsersData = useSelector(
     (state: RootState) => state.usersData.activeUsers,
   );
@@ -62,7 +65,7 @@ const UserDataSection = () => {
       },
     };
     dispatch(updateUserData(payload));
-    navigate('/');
+    setIsVisible(true);
   };
 
   return (

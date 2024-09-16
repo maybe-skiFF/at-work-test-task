@@ -1,3 +1,7 @@
+.userPageWrapper {
+  background-color: rebeccapurple;
+}
+
 .userPageContent {
   display: flex;
   flex-direction: column;

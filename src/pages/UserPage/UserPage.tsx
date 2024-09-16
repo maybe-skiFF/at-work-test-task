@@ -4,7 +4,11 @@ import arrowLeft from '../../../public/arrow-left.png';
 import { UserAvatarSection } from '../../components/UserAvatarSection/UserAvatarSection';
 import { UserDataSection } from '../../components/UserDataSection/UserDataSection';
 import { Link } from 'react-router-dom';
+import { PopapAccept } from '../../components/PopapAccept/PopapAccept';
+import { useState } from 'react';
 const UserPage = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
   return (
     <div className={styles.userPageWrapper}>
       <Header />
@@ -21,9 +25,10 @@ const UserPage = () => {
         </Link>
         <div className={styles.userSections}>
           <UserAvatarSection />
-          <UserDataSection />
+          <UserDataSection setIsVisible={setIsVisible} />
         </div>
       </div>
+      <PopapAccept isVisible={isVisible} setIsVisible={setIsVisible} />
     </div>
   );
 };
