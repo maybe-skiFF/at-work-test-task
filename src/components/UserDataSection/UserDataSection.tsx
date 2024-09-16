@@ -3,8 +3,19 @@ import styles from './UserDataSection.module.css';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { formValidateSchema } from '../../utils/formValidationSchema';
 import { IFormUserData } from '../../interfaces';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../redux/store';
+import { useParams } from 'react-router-dom';
 
 const UserDataSection = () => {
+  const { key } = useParams();
+  const activeUsersData = useSelector(
+    (state: RootState) => state.usersData.activeUsers,
+  );
+  const selectedUserData = activeUsersData.filter(
+    user => String(user.id) === key,
+  );
+
   const {
     register,
     handleSubmit,
@@ -12,6 +23,14 @@ const UserDataSection = () => {
   } = useForm({
     mode: 'onChange',
     resolver: yupResolver(formValidateSchema),
+    defaultValues: {
+      name: selectedUserData[0].name || '',
+      username: selectedUserData[0].username || '',
+      email: selectedUserData[0].email || '',
+      city: selectedUserData[0].address.city || '',
+      phone: selectedUserData[0].phone || '',
+      company: selectedUserData[0].company.name || '',
+    },
   });
 
   const onSubmit: SubmitHandler<IFormUserData> = async data => {
