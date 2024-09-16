@@ -24,16 +24,19 @@ const PopapAccept = ({ isVisible, setIsVisible }: IProps) => {
   if (!isVisible) return null;
 
   return (
-    <div className={styles.popapWrapper}>
-      <img
-        onClick={closePopap}
-        className={styles.crossImg}
-        src={cross}
-        alt="cross"
-      />
-      <img className={styles.popapImg} src={popapImg} alt="popapImg" />
-      <p className={styles.popapText}>Изменения сохранены!</p>
-    </div>
+    <>
+      <div className={styles.popapOverlay} onClick={closePopap}></div>
+      <div className={styles.popapWrapper}>
+        <img
+          onClick={closePopap}
+          className={styles.crossImg}
+          src={cross}
+          alt="cross"
+        />
+        <img className={styles.popapImg} src={popapImg} alt="popapImg" />
+        <p className={styles.popapText}>Изменения сохранены!</p>
+      </div>
+    </>
   );
 };
 
