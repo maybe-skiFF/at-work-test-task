@@ -9,7 +9,7 @@ interface IProps {
 }
 
 const UserItem = ({ isActiveUsers, usersData }: IProps) => {
-  const { name, username, company, address } = usersData;
+  const { id, name, username, company, address } = usersData;
 
   return (
     <div className={styles.userItemContainer}>
@@ -21,7 +21,7 @@ const UserItem = ({ isActiveUsers, usersData }: IProps) => {
           <span className={styles.userItemCity}>{address.city}</span>
         </div>
         {isActiveUsers ? (
-          <DropdownMenuActive userName={name} />
+          <DropdownMenuActive userName={name} userId={String(id)} />
         ) : (
           <DropdownMenuArchive userName={name} />
         )}
