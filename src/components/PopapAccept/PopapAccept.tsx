@@ -9,6 +9,10 @@ interface IProps {
 }
 
 const PopapAccept = ({ isVisible, setIsVisible }: IProps) => {
+  const closePopap = () => {
+    setIsVisible(false);
+  };
+
   useEffect(() => {
     const time = setTimeout(() => {
       closePopap();
@@ -18,10 +22,6 @@ const PopapAccept = ({ isVisible, setIsVisible }: IProps) => {
   });
 
   if (!isVisible) return null;
-
-  const closePopap = () => {
-    setIsVisible(false);
-  };
 
   return (
     <div className={styles.popapWrapper}>
