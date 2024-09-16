@@ -9,7 +9,7 @@ const HeaderMenu = () => {
     <div className={styles.headerMenuWrapper}>
       <div className={styles.favoriteWrapper}>
         <img className={styles.favoriteImg} src={likesImg} alt="likesImg" />
-        <img src={bellImg} alt="bellImg" />
+        <img className={styles.bellImg} src={bellImg} alt="bellImg" />
       </div>
       <div className={styles.userInfoWrapper}>
         <img className={styles.userInfoImg} src={userImg} alt="userImg" />

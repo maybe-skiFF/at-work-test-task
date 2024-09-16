@@ -7,6 +7,13 @@
   border-radius: 16px;
 }
 
+@media (max-width: 880px) {
+  .userItemContainer {
+    flex-direction: column;
+    width: max-content;
+  }
+}
+
 .userItemImgWrapper {
   display: flex;
   border-radius: 8px;

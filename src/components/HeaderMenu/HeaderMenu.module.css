@@ -26,3 +26,17 @@
   font-size: 16px;
   color: var(--color-2);
 }
+
+@media (max-width: 650px) {
+  .bellImg {
+    display: none;
+  }
+
+  .favoriteImg {
+    display: none;
+  }
+
+  .userInfoName {
+    display: none;
+  }
+}

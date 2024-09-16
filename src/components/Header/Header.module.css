@@ -9,3 +9,9 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media (max-width: 650px) {
+  .headerContainer {
+    padding: 16px 20px;
+  }
+}
