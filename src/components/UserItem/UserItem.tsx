@@ -13,12 +13,26 @@ const UserItem = ({ isActiveUsers, usersData }: IProps) => {
 
   return (
     <div className={styles.userItemContainer}>
-      <div className={styles.userItemImgWrapper}></div>
+      <div
+        className={`${styles.userItemImgWrapper} ${!isActiveUsers ? styles.userItemImgWrapperNonActive : ''}`}
+      ></div>
       <div className={styles.userItemContent}>
         <div className={styles.userItemDiscription}>
-          <span className={styles.userItemName}>{username}</span>
-          <span className={styles.userItemCompany}>{company.name}</span>
-          <span className={styles.userItemCity}>{address.city}</span>
+          <span
+            className={`${styles.userItemName} ${!isActiveUsers ? styles.userItemNameNonActive : ''}`}
+          >
+            {username}
+          </span>
+          <span
+            className={`${styles.userItemCompany} ${!isActiveUsers ? styles.userItemCompanyNonActive : ''} `}
+          >
+            {company.name}
+          </span>
+          <span
+            className={`${styles.userItemCity} ${!isActiveUsers ? styles.userItemCityNonActive : ''}`}
+          >
+            {address.city}
+          </span>
         </div>
         {isActiveUsers ? (
           <DropdownMenuActive userName={name} userId={String(id)} />

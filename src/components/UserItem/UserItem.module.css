@@ -43,6 +43,22 @@
   margin-bottom: 7px;
 }
 
+.userItemNameNonActive {
+  color: var(--color-2);
+}
+
+.userItemCompanyNonActive {
+  color: var(--color-3);
+}
+
+.userItemCityNonActive {
+  color: var(--color-4);
+}
+
+.userItemImgWrapperNonActive {
+  opacity: 0.3;
+}
+
 .userItemCompany {
   font-family: var(--font-family);
   font-weight: 500;
